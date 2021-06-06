@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gunfire Reborn Challenge Generator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/grcg/normalize.css">
+<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">-->
+  <link rel="stylesheet" href="css/grcg/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div class="container">
+    <h1>GRCG v0.0.1</h1>
+    <h5>Gunfire Reborn Challenge Generator</h5>
+    <!--    <p>Click the button to generate a randomised run.</p>-->
+    <span>
+    <button onclick="generateRun()">Generate New Challenge</button>
+    </span>
+    <div class=challengeContainer">
+      <div id="playerDisplay"></div>
+      <div id="challengeDisplay">
+        <!--  Challenges will display here  -->
+      </div>
+    </div>
+
+  </div>
+  <script src="js/grcg/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/grcg/plugins.js"></script>
+  <script src="js/grcg/grcg.js"></script>
+
+<!--  &lt;!&ndash; Google Analytics: change UA-XXXXX-Y to be your site's ID. &ndash;&gt;-->
+<!--  <script>-->
+<!--    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;-->
+<!--    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')-->
+<!--  </script>-->
+<!--  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
+</body>
+
+<footer class="app-footer">
+  Built with ♥ by <a href="https://www.twitch.tv/franwin_">FranWin_</a>
+</footer>
+
+</html>
