@@ -63,7 +63,6 @@ function shuffle(array) {
   return array;
 }
 
-
 function generateRun() {
   // let outstr = ""
   let difficulty = difficulties[Math.floor(Math.random() * difficulties.length)]
@@ -72,7 +71,9 @@ function generateRun() {
   // console.log(character)
 
   let challenge_list = []
-  let challenges_copy = challenges
+  // JS is not python! deepcopies are hard and don't necessarily happen when you think they do
+  // Converting to and from JSON forces a copy and prevents the challenges_copy array from being exhausted
+  let challenges_copy = JSON.parse(JSON.stringify(challenges))
   // We need to shuffle the array because js arrays do not have a pop command that will take an index to pop.
   // I'm sure all this would be a lot easier if I just learned node.js but that feels ludicrous!
   challenges_copy = shuffle(challenges_copy)
