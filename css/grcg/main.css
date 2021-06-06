@@ -133,8 +133,8 @@ a {
 .container {
   display: flex;
   justify-content: center;
-  /*align-content: center;*/
   /*align-items: center;*/
+  align-content: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
   margin: 10%;
