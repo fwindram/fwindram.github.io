@@ -1,3 +1,6 @@
+// IDEAS:
+// Allow users to change the max counter value (so they can increase the difficulty)
+
 const difficulties = ["Normal", "Elite", "Nightmare", "Any"]
 
 const characters = ["Ao Bai", "Crown Prince", "Qing Yan", "Lei Luo", "Any Character"]
@@ -8,7 +11,7 @@ const challenges = [
   ["Normal Run", 1],
   ["Speedrun", 0.4],
   ["No Dash", 0.5],
-  ["VR Mode: Only Dash", 1],
+  ["No Sound", 0.5],
   ["No Craftsman", 0.3],
   ["No Kermit", 0.3],
   ["No Vaults", 0.3],
@@ -23,9 +26,10 @@ const challenges = [
   ["No Manual Reloads", 0.2],
   ["No Elemental Weapons", 0.2],
   ["No Insurance: Try not to break anything", 0.2],
-  ["Butterfingers: Always Switch Weapons", 0.2],
-  ["Sticky Fingers: Never Switch Weapons", 0.2],
+  ["Butterfingers: Always pick up new weapons", 0.2],
+  ["Sticky Fingers: Never pick up new weapons", 0.2],
   ["Rebind Hell: Invert Movement Bindings", 1],
+  ["Pimm's Curse: Invert mouse buttons, axis, & movement", 1],
   ["NES Mode: Lowest Resolution", 1],
   ["Foundry Only", 0.5],
   ["Pistols", 0.5],
@@ -43,12 +47,12 @@ const challenges = [
   ["No Gemini", 0.1],
   ["OGemini: No reforging", 0.1],
   ["NoUI: Press F10 to play without UI", 0.7],
-  ["OGemini: No reforging", 0.1],
   ["Backwards movement only", 0.4],
-  ["Only Turn Left", 0.5],
-  ["Only Turn Right", 0.5],
-  ["Left Handed Mouse", 0.5],
+  // ["Only Turn Left", 0.5],
+  // ["Only Turn Right", 0.5],
+  ["Switch mouse buttons", 0.5],
   ["Change Language", 0.6],
+  ["Use a controller", 0.4],
 ]
 
 // Why in the name of all that is holy do I need to write fisher-yates again just to shuffle an array?
@@ -64,6 +68,7 @@ function shuffle(array) {
 }
 
 function generateRun() {
+  // console.log("Generating new run...")
   // let outstr = ""
   let difficulty = difficulties[Math.floor(Math.random() * difficulties.length)]
   // console.log(difficulty)
@@ -85,7 +90,9 @@ function generateRun() {
     challenge = challenges_copy.pop()
     challenge_list.push(challenge[0])
     counter += challenge[1]
+    // console.log("Counter: " + counter)
     randfloat = Math.random()
+    // console.log("Randfloat: " + randfloat)
   }
   // console.log(challenge_list)
   document.getElementById('playerDisplay').innerHTML = "".concat(character, " on ", difficulty, " difficulty")
