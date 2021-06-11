@@ -30,7 +30,7 @@ const challenges = [
   ["Sticky Fingers: Never pick up new weapons", 0.2],
   ["Rebind Hell: Invert Movement Bindings", 1],
   ["Pimm's Curse: Invert mouse buttons, axis, & movement", 1],
-  ["NES Mode: Lowest Resolution", 1],
+  // ["NES Mode: Lowest Resolution", 1], // Sadly this seems to fuck with people's stream setups...which sucks
   ["Foundry Only", 0.5],
   ["Pistols", 0.5],
   ["Submachineguns", 0.3],
