@@ -27,11 +27,21 @@
 
   <!-- Add your site or application content here -->
   <div class="container">
-    <h1>GRCG v0.0.2</h1>
+    <h1>GRCG v0.1.0</h1>
     <h5>Gunfire Reborn Challenge Generator</h5>
     <!--    <p>Click the button to generate a randomised run.</p>-->
     <span>
-    <button onclick="generateRun()">Generate New Challenge</button>
+      <label for="challengeDifficulty">Challenge Difficulty: </label>
+      <input type="number"
+             name="difficulty"
+             id="challengeDifficulty"
+             value=1
+             min=0
+             step=0.1
+             onclick="this.style.width = ((this.value.length + 2)) + 'ch';"
+             onkeydown="this.style.width = ((this.value.length + 2)) + 'ch';">
+      <br>
+      <button onclick="generateRun(document.getElementById('challengeDifficulty').value)">Generate New Challenge</button>
     </span>
     <div class=challengeContainer">
       <div id="playerDisplay"></div>
