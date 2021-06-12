@@ -32,9 +32,9 @@ const challenges = [
   ["Butterfingers: Always pick up new weapons", 0.2, 3],
   ["Sticky Fingers: Never pick up new weapons", 0.2, 3],
   ["Rebind Hell: Invert Movement Bindings", 1, 3],
-  ["Pimm's Curse: Invert mouse buttons, axis, & movement", 1, 1],
+  ["Pimm's Curse: Invert mouse buttons, axis, & movement", 100, 1],
+  ["Kap's Curse: SWORD CAT!", 100, 1],
   // ["NES Mode: Lowest Resolution", 1], // Sadly this seems to fuck with people's stream setups...which sucks
-  ["Kap's Curse: SWORD CAT!", 1, 1],
   ["Foundry Only", 0.5, 5],
   ["Pistols", 0.5, 5],
   ["Submachineguns", 0.3, 5],
