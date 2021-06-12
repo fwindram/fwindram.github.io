@@ -94,7 +94,14 @@ function findResampleMax(challengeArray) {
   return challengeArray.reduce(reducer, 0)
 }
 
-const resampleMax = findResampleMax(challenges) * 0.9  // Allow a bit of headroom just in case
+const resampleMax = findResampleMax(challenges) * 0.99  // Allow a bit of headroom just in case
+// console.log(findResampleMax(challenges))
+
+function setMaxDifficulty() {
+  // Set max of difficulty input when called
+  let input = document.getElementById("challengeDifficulty")
+  input.setAttribute("max", Math.floor(resampleMax));
+}
 
 function removeItem(array, item) {
   return array.filter(i => i !== item);
