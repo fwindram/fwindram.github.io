@@ -132,13 +132,18 @@ function generateRun(challengeDifficulty) {
   let randfloat = 1;  // This will eventually be definable via the UI
   while (counter < randfloat) {
     let challengeIdx = challengeIdxs.pop(); // Get next challenge index
-    challengeIdxs = removeItem(challengeIdxs, challengeIdx) // Remove all entries of the idx from the index array
-
+    // console.log(challengeIdx)
+    challengeIdxs = removeItem(challengeIdxs, challengeIdx); // Remove all entries of the idx from the index array
+    // console.log(challengeIdxs)
     challenge_list.push(challenges[challengeIdx][0]); // Add challenge to list
     counter += challenges[challengeIdx][1];           // Increment counter
     // console.log("Counter: " + counter)
     randfloat = Math.random() * challengeDifficulty;
     // console.log("Randfloat: " + randfloat)
+    if (challengeIdxs.length < 1) {
+      console.warn("Exhausted Challenge Index Buffer...")
+      break;
+    }
   }
   // console.log(challenge_list)
   document.getElementById('playerDisplay').innerHTML = "".concat(character, " on ", difficulty, " difficulty");
