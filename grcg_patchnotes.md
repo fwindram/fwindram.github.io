@@ -1,13 +1,12 @@
 # Gunfire Reborn Challenge Generator Patch Notes
 
 *Current Version: v0.1.1*
-## v0.1.2
-- Force generator to stop rerolling after pulling Kap's or Pimm's curse
 
 ## v0.1.1
 - Added inital weightings for all challenges
 - Added check to make sure challenge buffer can never be exhausted
 - Added UI hint of max possible difficulty
+- Remove onclick resizing of difficulty input
 
 ## v0.1.0
 - Disabled NES mode as it currently breaks streamer setups
