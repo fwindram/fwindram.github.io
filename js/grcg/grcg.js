@@ -33,7 +33,7 @@ const challenges = [
   ["Sticky Fingers: Never pick up new weapons", 0.2, 3],
   ["Rebind Hell: Invert Movement Bindings", 1, 3],
   ["Pimm's Curse: Invert mouse buttons, axis, & movement", 1, 1],
-  // ["NES Mode: Lowest Resolution", 1], // Sadly this seems to fuck with people's stream setups...which sucks
+  // ["NES Mode: Lowest Resolution", 1, 1], // Sadly this seems to fuck with people's stream setups...which sucks
   ["Kap's Curse: SWORD CAT!", 1, 1],
   ["Foundry Only", 0.5, 5],
   ["Pistols", 0.5, 5],
@@ -52,8 +52,6 @@ const challenges = [
   ["OGemini: No reforging", 0.1, 4],
   ["NoUI: Press F10 to play without UI", 0.7, 2],
   ["Backwards movement only", 0.4, 1],
-  // ["Only Turn Left", 0.5],
-  // ["Only Turn Right", 0.5],
   ["Switch mouse buttons", 0.5, 3],
   ["Change Language", 0.6, 3],
   ["Use a controller", 0.4, 2],
@@ -73,7 +71,7 @@ function shuffle(array) {
 
 function createWeightedIdxArray(challengeArray) {
   // Calculate total length of array
-  console.log("Creating Weighted Index Array");
+  // console.log("Creating Weighted Index Array");
   // const reducer = (accumulator, currentValue) => accumulator + currentValue[2];
   // let arrayLength = challengearray.reduce(reducer, 0)
   let i;
@@ -112,12 +110,12 @@ function generateRun(challengeDifficulty) {
 
   // Check whether the supplied difficulty is a positive number
   if (isNaN(challengeDifficulty) || challengeDifficulty <= 0) {
-    challengeDifficulty = 1
+    challengeDifficulty = 1;
   }
 
   // Check whether the supplied difficulty is greater than the max the generator could generate
   if (challengeDifficulty > resampleMax) {
-    challengeDifficulty = resampleMax
+    challengeDifficulty = resampleMax;
   }
   // console.log(challengeDifficulty)
 
@@ -136,7 +134,7 @@ function generateRun(challengeDifficulty) {
 
 
   let counter = 0;
-  let randfloat = 1;  // This will eventually be definable via the UI
+  let randfloat = 1;
   while (counter < randfloat) {
     let challengeIdx = challengeIdxs.pop(); // Get next challenge index
     // console.log(challengeIdx)

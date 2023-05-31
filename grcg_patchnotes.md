@@ -31,4 +31,3 @@
 
 # TODO:
 - Add system to ignore draws that conflict with other draws (no more "All Vaults + No Vaults")
-- Set weights for all challenges to good relative values
