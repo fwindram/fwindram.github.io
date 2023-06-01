@@ -1,0 +1,61 @@
+/* ### FW Custom ### */
+/*Add header*/
+.headingrow {
+    /*background-image: linear-gradient(to right, #0000,#000a,#000a,#000a,#0000);*/
+    background-image: radial-gradient(#000a,#000a,#000a,#0000, #0000);
+}
+
+.publications {
+    font-size: 18px;
+}
+
+.publications .paper{
+    color: #eee;
+}
+
+.publications .deprioritise{
+    color: #777;
+}
+.publications .author{
+    color: #fff;
+    font-weight: bold;
+}
+
+.illustration{
+    padding: 2% 0 5% 0;
+}
+
+h2{
+    border-top: 1px solid #111;
+    padding-top: 85px;
+}
+
+@media (min-width: 767px){
+    .content-section {
+        padding-top: 50px;
+    }
+}
+
+.content-section {
+    padding-top: 50px;
+}
+
+.headshot{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 3%;
+}
+
+@media(min-width:767px) {
+    .fa-play-circle{
+        /*FW: Control the little circle logo rotation when we scroll*/
+        transition: transform 0.5s;
+    }
+
+    .top-nav-collapse .fa-play-circle{
+        transform: rotate(-90deg);
+
+    }
+}

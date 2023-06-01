@@ -19,7 +19,7 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+        }, 600, 'easeInOutQuad');   // FW: This is where we control the snapping and scrolling from links
         event.preventDefault();
     });
 });
@@ -37,7 +37,7 @@ $("a").mouseup(function(){
 
 // Google Maps Scripts
 // When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
+// google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
     // Basic options for a simple Google Map

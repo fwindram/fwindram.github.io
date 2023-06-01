@@ -115,7 +115,7 @@ a:focus {
         padding: 20px 0;
         border-bottom: 0;
         letter-spacing: 1px;
-        background: 0 0;
+        background-color: #0005;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -153,10 +153,12 @@ a:focus {
 
 .intro .intro-body .brand-heading {
     font-size: 40px;
+    text-shadow: 0 0 10px #000000;
 }
 
 .intro .intro-body .intro-text {
     font-size: 18px;
+    text-shadow: 0 0 10px #000000;
 }
 
 @media(min-width:767px) {

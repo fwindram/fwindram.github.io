@@ -616,6 +616,9 @@
 .fa-github:before {
   content: "\f09b";
 }
+/*.fa-orcid:before {*/
+/*  content: "\f20f";*/
+/*}*/
 .fa-unlock:before {
   content: "\f09c";
 }
