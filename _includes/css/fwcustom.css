@@ -47,6 +47,7 @@ h2{
     width: 40%;
     min-width: 300px;
     padding: 3%;
+    border-radius: 50px;
 }
 
 .pkglogo{
