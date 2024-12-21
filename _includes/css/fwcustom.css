@@ -45,6 +45,7 @@ h2{
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+    min-width: 300px;
     padding: 3%;
 }
 
@@ -72,28 +73,31 @@ h2{
 }
 
 @media(min-width:767px) {
-    .fa-play-circle{
+    .fa-play-circle {
         /*FW: Control the little circle logo rotation when we scroll*/
         transition: transform 0.5s;
     }
 
-    .top-nav-collapse .fa-play-circle{
+    .top-nav-collapse .fa-play-circle {
         transform: rotate(-90deg);
 
     }
 }
 
 .pkgcontainer{
-    display: grid;
-    grid-template-columns:
-      repeat(3, minmax(150px, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
     gap: 15px;
 }
 
+
 .pkgchild{
-    display: grid;
-    place-content: start;
     border-radius: 15px;
+    flex-basis: 300px;
+    max-width: 300px;
     border:
         2px solid hsl(210deg 8% 50%);
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -134,9 +138,6 @@ h2{
 }
 
 .pkggridlogo{
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
     width: 50%;
-    padding: 3%;
+    max-width:128px;
 }
